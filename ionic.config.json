@@ -1,0 +1,7 @@
+{
+  "name": "magic-counter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
