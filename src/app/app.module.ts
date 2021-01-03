@@ -14,6 +14,8 @@ import { Board2PComponent } from './board/board2p';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 	declarations: [
@@ -28,7 +30,9 @@ import { MatListModule } from '@angular/material/list';
 		IonicModule.forRoot(),
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		MatListModule
+		MatListModule,
+		MatButtonModule,
+		MatIconModule
 	],
 	providers: [
 		StatusBar,

@@ -1,0 +1,69 @@
+#board {
+    width: 100vw;
+    height: 100vh;
+    #boardp1 {
+        height: 50%;
+        background-color: darkcyan;
+        #life-p1 {
+            transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+            position: relative;
+            top: 0;
+        }
+        #buttons-p1 {
+            position: absolute;
+            top: 1rem;
+            width: 100%;
+            text-align: center;
+            button {
+                font-size: 1.2rem;
+                width: 3rem;
+                height: 3rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                p {
+                    transform: rotate(-180deg);
+                    -webkit-transform: rotate(-180deg);
+                    -moz-transform: rotate(-180deg);
+                    -ms-transform: rotate(-180deg);
+                    -o-transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    #boardp2 {
+        height: 50%;
+        background-color: darkred;
+        #life-p2 {
+            position: relative;
+            top: 50%;
+        }
+        #buttons-p2 {
+            position: absolute;
+            bottom: 1rem;
+            width: 100%;
+            text-align: center;
+            button {
+                font-size: 1.2rem;
+                width: 3rem;
+                height: 3rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .life {
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        font-size: 18vh;
+    }
+    .buttons-spacing {
+        display: inline-block;
+        width: 4rem;
+    }
+}

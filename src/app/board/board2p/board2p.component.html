@@ -1,26 +1,65 @@
 <ion-content [fullscreen]="true">
+	<div id="board">
+		<div id="boardp1">
+			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
+			<div id="buttons-p1">
+				<button mat-fab color="primary" (click)="updateLife(1, -5)">
+					<p>-5</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(1, -1)">
+					<p>-1</p>
+				</button>
+				<div class="buttons-spacing"></div>
+				<button mat-fab color="primary" (click)="updateLife(1, 1)">
+					<p>+1</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(1, 5)">
+					<p>+5</p>
+				</button>
+			</div>
+		</div>
+		<div id="boardp2">
+			<div class="life" id="life-p2">{{ getPlayer(2).life }}</div>
+			<div id="buttons-p2">
+				<button mat-fab color="primary" (click)="updateLife(2, -5)">
+					<p>-5</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(2, -1)">
+					<p>-1</p>
+				</button>
+				<div class="buttons-spacing"></div>
+				<button mat-fab color="primary" (click)="updateLife(2, 1)">
+					<p>+1</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(2, 5)">
+					<p>+5</p>
+				</button>
+			</div>
+		</div>
+	</div>
+
 	<ion-fab vertical="center" horizontal="center" slot="fixed">
 		<ion-fab-button>
-			<ion-icon name="share"></ion-icon>
+			<mat-icon>menu</mat-icon>
 		</ion-fab-button>
 		<ion-fab-list side="top">
-			<ion-fab-button>
-				<ion-icon name="logo-vimeo"></ion-icon>
+			<ion-fab-button (click)="reset()">
+				<mat-icon>refresh</mat-icon>
 			</ion-fab-button>
 		</ion-fab-list>
 		<ion-fab-list side="bottom">
-			<ion-fab-button>
-				<ion-icon name="logo-facebook"></ion-icon>
+			<ion-fab-button routerLink="/">
+				<mat-icon>home</mat-icon>
 			</ion-fab-button>
 		</ion-fab-list>
 		<ion-fab-list side="start">
 			<ion-fab-button>
-				<ion-icon name="logo-instagram"></ion-icon>
+				<mat-icon>style</mat-icon>
 			</ion-fab-button>
 		</ion-fab-list>
 		<ion-fab-list side="end">
 			<ion-fab-button>
-				<ion-icon name="logo-twitter"></ion-icon>
+				<mat-icon>colorize</mat-icon>
 			</ion-fab-button>
 		</ion-fab-list>
 	</ion-fab>

@@ -1,3 +1,4 @@
 export interface IPlayer {
-	score: number;
+	id: number;
+	life: number;
 }
