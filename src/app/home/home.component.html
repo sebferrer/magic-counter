@@ -1,15 +1,18 @@
 <ion-header [translucent]="true">
 	<ion-toolbar>
 		<ion-title>
-			Blank
+			Magic Counter
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-	<a class="menu-item" routerLink="/board2p" aria-label="Calendar">
-		2 Players
-	</a>
+	<mat-selection-list [multiple]="false">
+		<mat-list-option>1 Player</mat-list-option>
+		<mat-list-option routerLink="/board2p">2 Players</mat-list-option>
+		<mat-list-option>3 Players</mat-list-option>
+		<mat-list-option>4 Players</mat-list-option>
+	</mat-selection-list>
 
 </ion-content>

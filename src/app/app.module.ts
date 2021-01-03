@@ -13,6 +13,8 @@ import { ABoardComponent } from './board';
 import { Board2PComponent } from './board/board2p';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatListModule } from '@angular/material/list';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -21,7 +23,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		Board2PComponent
 	],
 	entryComponents: [],
-	imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
+	imports: [
+		BrowserModule,
+		IonicModule.forRoot(),
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatListModule
+	],
 	providers: [
 		StatusBar,
 		SplashScreen,
