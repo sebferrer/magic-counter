@@ -19,11 +19,11 @@ export class ABoardComponent implements OnInit {
 		return this.players.find(player => player.id === id) || null;
 	}
 
-	public updateLife(id: number, life: number) {
+	public updateLife(id: number, life: number): void {
 		this.getPlayer(id).life += life;
 	}
 
-	public reset() {
+	public reset(): void {
 		for(const player of this.players) {
 			player.life = 20;
 		}
