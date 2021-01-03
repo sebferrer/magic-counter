@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home';
 import { ABoardComponent } from './board';
 import { Board2PComponent } from './board/board2p';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,7 @@ import { Board2PComponent } from './board/board2p';
 		Board2PComponent
 	],
 	entryComponents: [],
-	imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+	imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
 	providers: [
 		StatusBar,
 		SplashScreen,
