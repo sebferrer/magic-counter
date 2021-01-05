@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardMenuComponent } from './board-menu';
 import { BoardMenuColorComponent } from './board-menu-color';
+import { Board4PComponent } from './board/board4p';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { BoardMenuColorComponent } from './board-menu-color';
 		BoardMenuComponent,
 		BoardMenuColorComponent,
 		ABoardComponent,
-		Board2PComponent
+		Board2PComponent,
+		Board4PComponent
 	],
 	entryComponents: [],
 	imports: [

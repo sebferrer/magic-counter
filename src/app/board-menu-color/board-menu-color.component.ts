@@ -20,10 +20,15 @@ export class BoardMenuColorComponent implements OnInit {
 	selectorWidth: number; // rem
 	@Input()
 	manaWidth: number; // rem
+	@Input()
+	space: number; // %
 	@Input ()
 	rotate: number;
 
 	constructor() {
+		this.selectorWidth = this.selectorWidth == null ? 3.5 : this.selectorWidth;
+		this.manaWidth = this.manaWidth == null ? 3 : this.manaWidth;
+		this.space = this.space == null ? 9 : this.space;
 		this.rotate = this.rotate == null ? 0 : this.rotate;
 	}
 

@@ -39,8 +39,8 @@
 	</div>
 
 	<app-board-menu *ngIf="displayMenu" [board]="this"></app-board-menu>
-	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25" [left]="50"
-		[selectorWidth]="3.5" [manaWidth]="3" [rotate]="180"></app-board-menu-color>
-	<app-board-menu-color *ngIf="getPlayer(2).colorPicking" [board]="this" [player]="getPlayer(2)" [top]="75" [left]="50"
-		[selectorWidth]="3.5" [manaWidth]="3"></app-board-menu-color>
+	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25"
+		[left]="50" [selectorWidth]="3.5" [manaWidth]="3" [space]="9" [rotate]="180"></app-board-menu-color>
+	<app-board-menu-color *ngIf="getPlayer(2).colorPicking" [board]="this" [player]="getPlayer(2)" [top]="75"
+		[left]="50" [selectorWidth]="3.5" [manaWidth]="3" [space]="9"></app-board-menu-color>
 </ion-content>

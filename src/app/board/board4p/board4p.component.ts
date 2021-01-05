@@ -3,15 +3,17 @@ import { ABoardComponent } from '../board.component';
 import { PlayerViewModel } from 'src/app/models/player.view.model';
 
 @Component({
-	selector: 'app-board2p',
-	templateUrl: './board2p.component.html',
-	styleUrls: ['./board2p.component.scss']
+	selector: 'app-board4p',
+	templateUrl: './board4p.component.html',
+	styleUrls: ['./board4p.component.scss']
 })
-export class Board2PComponent extends ABoardComponent implements OnInit {
-	private readonly NB_PLAYERS = 2;
+export class Board4PComponent extends ABoardComponent implements OnInit {
+	private readonly NB_PLAYERS = 4;
 	private readonly defaultColors = new Map<number, string>([
 		[1, 'blue'],
-		[2, 'red']
+		[2, 'green'],
+		[3, 'black'],
+		[4, 'white']
 	]);
 
 	constructor() {
