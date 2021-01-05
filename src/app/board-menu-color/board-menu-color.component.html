@@ -1,0 +1,50 @@
+<div id="menu-color-container">
+	<button id="menu-color-button" mat-mini-fab (click)="closeColorMenu()" [ngStyle]="{
+		'width': selectorWidth + 'rem', 'height': selectorWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (selectorWidth / 2) + 'rem)',
+		'left': 'calc(' + left + '% - ' + (selectorWidth / 2) + 'rem)'}">
+		<mat-icon>close</mat-icon>
+	</button>
+	<button mat-icon-button class="color-button" id="white" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem - 9%)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem - 9%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('white')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/white.svg" class="" /></div>
+	</button>
+	<button mat-icon-button class="color-button" id="colourless" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem - 18%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('colourless')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/colourless.svg" class="" /></div>
+	</button>
+	<button mat-icon-button class="color-button" id="green" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem + 9%)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem - 9%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('green')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/green.svg" class="" /></div>
+	</button>
+	<button mat-icon-button class="color-button" id="blue" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem + 9%)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem + 9%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('blue')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/blue.svg" class="" /></div>
+	</button>
+	<button mat-icon-button class="color-button" id="red" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem + 18%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('red')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/red.svg" class="" /></div>
+	</button>
+	<button mat-icon-button class="color-button" id="black" [ngStyle]="{
+		'width': manaWidth + 'rem', 'height': manaWidth + 'rem',
+		'top': 'calc(' + top + '% - ' + (manaWidth / 2) + 'rem - 9%)',
+		'left': 'calc(' + left + '% - ' + (manaWidth / 2) + 'rem + 9%)',
+		'transform': 'rotate(' + rotate + 'deg)'}" (click)="changeColor('black')">
+		<div class="menu-icon-container"><img src="/assets/svg/mana/full/black.svg" class="" /></div>
+	</button>
+</div>

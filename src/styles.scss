@@ -1,0 +1,50 @@
+.white {
+    background-image: url("assets/img/background/blanc_marges.png");
+    color: black;
+    button {
+        background-color: rgb(247, 247, 165) !important;
+        color: black !important;
+    }
+}
+
+.black {
+    background-image: url("assets/img/background/noir_marges.png");
+    color: white;
+    button {
+        background-color: rgb(92, 91, 91) !important;
+    }
+}
+
+.red {
+    background-image: url("assets/img/background/rouge_marges.png");
+    color: white;
+    button {
+        background-color: rgb(226, 4, 4) !important;
+    }
+}
+
+.blue {
+    background-image: url("assets/img/background/bleu_marges.png");
+    color: white;
+    button {
+        background-color: rgb(24, 24, 199) !important;
+    }
+}
+
+.green {
+    background-image: url("assets/img/background/vert_marges.png");
+    color: white;
+    button {
+        background-color: darkgreen !important;
+    }
+}
+
+.colourless {
+    background-image: url("assets/img/background/incolore_marges.png");
+    color: black;
+    button {
+        background-color: lightgrey !important;
+        color: black !important;
+        padding-bottom: 1rem !important;
+    }
+}

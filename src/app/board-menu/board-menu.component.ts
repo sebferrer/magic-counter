@@ -20,4 +20,10 @@ export class BoardMenuComponent implements OnInit {
 		this.board.reset();
 	}
 
+	public openColorMenu() {
+		for (const player of this.board.players) {
+			player.colorPicking = true;
+		}
+	}
+
 }

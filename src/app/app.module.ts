@@ -17,12 +17,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardMenuComponent } from './board-menu';
+import { BoardMenuColorComponent } from './board-menu-color';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
 		BoardMenuComponent,
+		BoardMenuColorComponent,
 		ABoardComponent,
 		Board2PComponent
 	],

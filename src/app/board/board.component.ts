@@ -8,12 +8,13 @@ import { PlayerViewModel } from '../models/player.view.model';
 })
 export class ABoardComponent implements OnInit {
 	public players: PlayerViewModel[];
+	public displayMenu: boolean;
 
-	constructor() { }
-
-	public ngOnInit(): void {
-
+	constructor() {
+		this.displayMenu = true;
 	}
+
+	public ngOnInit(): void { }
 
 	public getPlayer(id: number): PlayerViewModel {
 		return this.players.find(player => player.id === id) || null;
@@ -24,9 +25,13 @@ export class ABoardComponent implements OnInit {
 	}
 
 	public reset(): void {
-		for(const player of this.players) {
+		for (const player of this.players) {
 			player.life = 20;
 		}
+	}
+
+	public getColor(playerId: number): string {
+		return this.players.find(player => player.id === playerId).color;
 	}
 
 }

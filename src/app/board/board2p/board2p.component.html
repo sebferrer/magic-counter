@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
 	<div id="board">
-		<div id="boardp1">
+		<div id="boardp1" [ngClass]="getPlayer(1).color">
 			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
 			<div id="buttons-p1">
 				<button mat-fab color="primary" (click)="updateLife(1, -5)">
@@ -18,7 +18,7 @@
 				</button>
 			</div>
 		</div>
-		<div id="boardp2">
+		<div id="boardp2" [ngClass]="getPlayer(2).color">
 			<div class="life" id="life-p2">{{ getPlayer(2).life }}</div>
 			<div id="buttons-p2">
 				<button mat-fab color="primary" (click)="updateLife(2, -5)">
@@ -38,5 +38,9 @@
 		</div>
 	</div>
 
-	<app-board-menu [board]="this"></app-board-menu>
+	<app-board-menu *ngIf="displayMenu" [board]="this"></app-board-menu>
+	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25" [left]="50"
+		[selectorWidth]="3.5" [manaWidth]="3" [rotate]="180"></app-board-menu-color>
+	<app-board-menu-color *ngIf="getPlayer(2).colorPicking" [board]="this" [player]="getPlayer(2)" [top]="75" [left]="50"
+		[selectorWidth]="3.5" [manaWidth]="3"></app-board-menu-color>
 </ion-content>

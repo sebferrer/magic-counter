@@ -3,14 +3,9 @@
     height: 100vh;
     #boardp1 {
         height: 50%;
-        background-image: url("../../../assets/img/background/bleu_marges.png");
         background-size: cover;
         #life-p1 {
-            transform: rotate(-180deg);
-            -webkit-transform: rotate(-180deg);
-            -moz-transform: rotate(-180deg);
-            -ms-transform: rotate(-180deg);
-            -o-transform: rotate(-180deg);
+            transform: rotate(180deg);
             position: relative;
             top: 0;
         }
@@ -26,18 +21,16 @@
                 margin-left: 1rem;
                 margin-right: 1rem;
                 p {
-                    transform: rotate(-180deg);
-                    -webkit-transform: rotate(-180deg);
-                    -moz-transform: rotate(-180deg);
-                    -ms-transform: rotate(-180deg);
-                    -o-transform: rotate(-180deg);
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    transform: rotate(180deg);
                 }
             }
         }
     }
     #boardp2 {
         height: 50%;
-        background-image: url("../../../assets/img/background/rouge_marges.png");
         background-size: cover;
         #life-p2 {
             position: relative;
@@ -54,11 +47,15 @@
                 height: 3rem;
                 margin-left: 1rem;
                 margin-right: 1rem;
+                p {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                }
             }
         }
     }
     .life {
-        color: white;
         text-align: center;
         width: 100%;
         height: 50%;
