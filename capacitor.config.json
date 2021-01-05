@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.sebferrer.magiccounter",
   "appName": "magic-counter",
   "bundledWebRuntime": false,
   "npmClient": "npm",
