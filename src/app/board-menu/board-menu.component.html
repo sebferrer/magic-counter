@@ -1,4 +1,4 @@
-<ion-fab vertical="center" horizontal="center" slot="fixed">
+<ion-fab *ngIf="type === 'center'" vertical="center" horizontal="center" slot="fixed">
 	<ion-fab-button>
 		<mat-icon>menu</mat-icon>
 	</ion-fab-button>
@@ -20,6 +20,44 @@
 	<ion-fab-list side="end">
 		<ion-fab-button (click)="openColorMenu()">
 			<mat-icon>colorize</mat-icon>
+		</ion-fab-button>
+	</ion-fab-list>
+</ion-fab>
+<ion-fab *ngIf="type === 'vertical-top'" vertical="top" horizontal="start" slot="fixed">
+	<ion-fab-button>
+		<mat-icon>arrow_forward_ios</mat-icon>
+	</ion-fab-button>
+	<ion-fab-list side="end">
+		<ion-fab-button (click)="reset()">
+			<mat-icon>refresh</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button routerLink="/">
+			<mat-icon>home</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button>
+			<mat-icon>style</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button (click)="openColorMenu()">
+			<mat-icon>colorize</mat-icon>
+		</ion-fab-button>
+	</ion-fab-list>
+</ion-fab>
+<ion-fab *ngIf="type === 'horizontal-top'" vertical="top" horizontal="end" slot="fixed">
+	<ion-fab-button>
+		<mat-icon class="horizontal-icon">arrow_forward_ios</mat-icon>
+	</ion-fab-button>
+	<ion-fab-list side="bottom">
+		<ion-fab-button (click)="reset()">
+			<mat-icon class="horizontal-icon">refresh</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button routerLink="/">
+			<mat-icon class="horizontal-icon">home</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button>
+			<mat-icon class="horizontal-icon">style</mat-icon>
+		</ion-fab-button>
+		<ion-fab-button (click)="openColorMenu()">
+			<mat-icon class="horizontal-icon">colorize</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
 </ion-fab>

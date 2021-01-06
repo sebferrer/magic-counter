@@ -9,12 +9,12 @@ import { ABoardComponent } from '../board/board.component';
 export class BoardMenuComponent implements OnInit {
 	@Input()
 	board: ABoardComponent;
+	@Input()
+	type: string;
 
 	constructor() { }
 
-	public ngOnInit(): void {
-
-	}
+	public ngOnInit(): void { }
 
 	public reset(): void {
 		this.board.reset();
