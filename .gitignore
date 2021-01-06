@@ -32,3 +32,5 @@ npm-debug.log*
 
 /src/assets/img/background/raw
 /src/assets/svg/mana/no-background
+
+/apk
