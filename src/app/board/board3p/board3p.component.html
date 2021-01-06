@@ -42,29 +42,13 @@
 				</button>
 			</div>
 		</div>
-		<div id="boardp4" [ngClass]="getPlayer(4).color">
-			<div class="life" id="life-p4">{{ getPlayer(4).life }}</div>
-			<div id="buttons-p4">
-				<button mat-fab color="primary" (click)="updateLife(4, -5)">
-					<p>-5</p>
-				</button>
-				<button mat-fab color="primary" (click)="updateLife(4, 1)">
-					<p>+1</p>
-				</button>
-				<button mat-fab color="primary" (click)="updateLife(4, 5)">
-					<p>+5</p>
-				</button>
-			</div>
-		</div>
 	</div>
 
-	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'center'"></app-board-menu>
-	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25"
-		[left]="25" [selectorWidth]="3" [manaWidth]="2.5" [space]="7" [rotate]="180"></app-board-menu-color>
-	<app-board-menu-color *ngIf="getPlayer(2).colorPicking" [board]="this" [player]="getPlayer(2)" [top]="25"
-		[left]="75" [selectorWidth]="3" [manaWidth]="2.5" [space]="7" [rotate]="180"></app-board-menu-color>
-	<app-board-menu-color *ngIf="getPlayer(3).colorPicking" [board]="this" [player]="getPlayer(3)" [top]="75"
-		[left]="25" [selectorWidth]="3" [manaWidth]="2.5" [space]="7"></app-board-menu-color>
-	<app-board-menu-color *ngIf="getPlayer(4).colorPicking" [board]="this" [player]="getPlayer(4)" [top]="75"
-		[left]="75" [selectorWidth]="3" [manaWidth]="2.5" [space]="7"></app-board-menu-color>
+	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'horizontal-top'"></app-board-menu>
+	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="16.5"
+		[left]="50" [selectorWidth]="3" [manaWidth]="2.5" [space]="8" [rotate]="90"></app-board-menu-color>
+	<app-board-menu-color *ngIf="getPlayer(2).colorPicking" [board]="this" [player]="getPlayer(2)" [top]="49.5"
+		[left]="50" [selectorWidth]="3" [manaWidth]="2.5" [space]="8" [rotate]="90"></app-board-menu-color>
+	<app-board-menu-color *ngIf="getPlayer(3).colorPicking" [board]="this" [player]="getPlayer(3)" [top]="82.5"
+		[left]="50" [selectorWidth]="3" [manaWidth]="2.5" [space]="8" [rotate]="90"></app-board-menu-color>
 </ion-content>

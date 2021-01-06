@@ -4,6 +4,7 @@ import { HomeComponent } from './home';
 import { Board1PComponent } from './board/board1p';
 import { Board2PComponent } from './board/board2p';
 import { Board4PComponent } from './board/board4p';
+import { Board3PComponent } from './board/board3p';
 
 const routes: Routes = [
 	{
@@ -17,6 +18,10 @@ const routes: Routes = [
 	{
 		path: 'board2p',
 		component: Board2PComponent
+	},
+	{
+		path: 'board3p',
+		component: Board3PComponent
 	},
 	{
 		path: 'board4p',

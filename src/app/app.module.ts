@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home';
 import { ABoardComponent } from './board';
-import { Board2PComponent } from './board/board2p';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatListModule } from '@angular/material/list';
@@ -18,8 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BoardMenuComponent } from './board-menu';
 import { BoardMenuColorComponent } from './board-menu-color';
-import { Board4PComponent } from './board/board4p';
 import { Board1PComponent } from './board/board1p';
+import { Board2PComponent } from './board/board2p';
+import { Board3PComponent } from './board/board3p';
+import { Board4PComponent } from './board/board4p';
 
 @NgModule({
 	declarations: [
@@ -30,6 +31,7 @@ import { Board1PComponent } from './board/board1p';
 		ABoardComponent,
 		Board1PComponent,
 		Board2PComponent,
+		Board3PComponent,
 		Board4PComponent
 	],
 	entryComponents: [],

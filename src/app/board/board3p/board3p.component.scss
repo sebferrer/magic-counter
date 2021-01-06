@@ -1,0 +1,101 @@
+#board {
+    width: 100vw;
+    height: 100vh;
+    #boardp1 {
+        height: 33.33%;
+        background-size: cover;
+        #life-p1 {
+            transform: rotate(90deg);
+            position: relative;
+            top: 25%;
+            left: -12%;
+        }
+        #buttons-p1 {
+            position: absolute;
+            left: 1rem;
+            top: 1.5rem;
+            width: 3.5rem;
+            button {
+                font-size: 1.2rem;
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                p {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    #boardp2 {
+        height: 33.34%;
+        background-size: cover;
+        #life-p2 {
+            transform: rotate(90deg);
+            position: relative;
+            top: 25%;
+            left: -12%;
+        }
+        #buttons-p2 {
+            position: absolute;
+            left: 1rem;
+            top: calc(33% + 1.5rem);
+            width: 3.5rem;
+            button {
+                font-size: 1.2rem;
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                p {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    #boardp3 {
+        height: 33.33%;
+        background-size: cover;
+        #life-p3 {
+            transform: rotate(90deg);
+            position: relative;
+            top: 25%;
+            left: -12%;
+        }
+        #buttons-p3 {
+            position: absolute;
+            left: 1rem;
+            top: calc(66% + 1.5rem);
+            width: 3.5rem;
+            button {
+                font-size: 1.2rem;
+                width: 3rem;
+                height: 3rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                p {
+                    position: absolute;
+                    top: 30%;
+                    left: 30%;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .life {
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        font-size: 18vh;
+    }
+    .buttons-spacing {
+        display: inline-block;
+        width: 2rem;
+    }
+}
