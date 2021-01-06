@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home';
+import { Board1PComponent } from './board/board1p';
 import { Board2PComponent } from './board/board2p';
 import { Board4PComponent } from './board/board4p';
 
@@ -8,6 +9,10 @@ const routes: Routes = [
 	{
 		path: '',
 		component: HomeComponent
+	},
+	{
+		path: 'board1p',
+		component: Board1PComponent
 	},
 	{
 		path: 'board2p',

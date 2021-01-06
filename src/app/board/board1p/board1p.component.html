@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+	<div id="board">
+		<div id="boardp1" [ngClass]="getPlayer(1).color">
+			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
+			<div id="buttons-p1">
+				<button mat-fab color="primary" (click)="updateLife(1, -5)">
+					<p>-5</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(1, -1)">
+					<p>-1</p>
+				</button>
+				<div class="buttons-spacing"></div>
+				<button mat-fab color="primary" (click)="updateLife(1, 1)">
+					<p>+1</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(1, 5)">
+					<p>+5</p>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'vertical-top'"></app-board-menu>
+	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="50"
+		[left]="50" [selectorWidth]="3.5" [manaWidth]="3" [space]="9"></app-board-menu-color>
+</ion-content>
