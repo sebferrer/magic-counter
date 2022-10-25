@@ -3,36 +3,36 @@
 		<div id="boardp1" [ngClass]="getPlayer(1).color">
 			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
 			<div id="buttons-p1">
-				<button mat-fab color="primary" (click)="updateLife(1, -5)">
-					<p>-5</p>
+				<button mat-fab color="primary" (click)="updateLife(1, 5)">
+					<p>+5</p>
 				</button>
 				<button mat-fab color="primary" (click)="updateLife(1, 1)">
 					<p>+1</p>
 				</button>
-				<button mat-fab color="primary" (click)="updateLife(1, 5)">
-					<p>+5</p>
+				<button mat-fab color="primary" (click)="updateLife(1, -1)">
+					<p>-1</p>
 				</button>
 			</div>
 		</div>
 		<div id="boardp2" [ngClass]="getPlayer(2).color">
 			<div class="life" id="life-p2">{{ getPlayer(2).life }}</div>
 			<div id="buttons-p2">
-				<button mat-fab color="primary" (click)="updateLife(2, -5)">
-					<p>-5</p>
+				<button mat-fab color="primary" (click)="updateLife(2, 5)">
+					<p>+5</p>
 				</button>
 				<button mat-fab color="primary" (click)="updateLife(2, 1)">
 					<p>+1</p>
 				</button>
-				<button mat-fab color="primary" (click)="updateLife(2, 5)">
-					<p>+5</p>
+				<button mat-fab color="primary" (click)="updateLife(2, -1)">
+					<p>-1</p>
 				</button>
 			</div>
 		</div>
 		<div id="boardp3" [ngClass]="getPlayer(3).color">
 			<div class="life" id="life-p3">{{ getPlayer(3).life }}</div>
 			<div id="buttons-p3">
-				<button mat-fab color="primary" (click)="updateLife(3, -5)">
-					<p>-5</p>
+				<button mat-fab color="primary" (click)="updateLife(3, -1)">
+					<p>-1</p>
 				</button>
 				<button mat-fab color="primary" (click)="updateLife(3, 1)">
 					<p>+1</p>
@@ -45,8 +45,8 @@
 		<div id="boardp4" [ngClass]="getPlayer(4).color">
 			<div class="life" id="life-p4">{{ getPlayer(4).life }}</div>
 			<div id="buttons-p4">
-				<button mat-fab color="primary" (click)="updateLife(4, -5)">
-					<p>-5</p>
+				<button mat-fab color="primary" (click)="updateLife(4, -1)">
+					<p>-1</p>
 				</button>
 				<button mat-fab color="primary" (click)="updateLife(4, 1)">
 					<p>+1</p>

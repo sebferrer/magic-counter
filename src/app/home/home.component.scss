@@ -1,4 +1,15 @@
+.content {
+    background-color: white;
+    height: 100%;
+}
+
 .title {
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    width: 100%;
     font-size: 1.3rem;
     margin-left: 1rem;
     color: #212121;

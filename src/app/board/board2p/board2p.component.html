@@ -3,18 +3,18 @@
 		<div id="boardp1" [ngClass]="getPlayer(1).color">
 			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
 			<div id="buttons-p1">
-				<button mat-fab color="primary" (click)="updateLife(1, -5)">
-					<p>-5</p>
+				<button mat-fab color="primary" (click)="updateLife(1, 5)">
+					<p>+5</p>
 				</button>
-				<button mat-fab color="primary" (click)="updateLife(1, -1)">
-					<p>-1</p>
-				</button>
-				<div class="buttons-spacing"></div>
 				<button mat-fab color="primary" (click)="updateLife(1, 1)">
 					<p>+1</p>
 				</button>
-				<button mat-fab color="primary" (click)="updateLife(1, 5)">
-					<p>+5</p>
+				<div class="buttons-spacing"></div>
+				<button mat-fab color="primary" (click)="updateLife(1, -1)">
+					<p>-1</p>
+				</button>
+				<button mat-fab color="primary" (click)="updateLife(1, -5)">
+					<p>-5</p>
 				</button>
 			</div>
 		</div>
