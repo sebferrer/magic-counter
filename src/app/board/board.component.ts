@@ -9,9 +9,11 @@ import { PlayerViewModel } from '../models/player.view.model';
 export class ABoardComponent implements OnInit {
 	public players: PlayerViewModel[];
 	public displayMenu: boolean;
+	public displayDices: boolean;
 
 	constructor() {
 		this.displayMenu = true;
+		this.displayDices = false;
 	}
 
 	public ngOnInit(): void { }

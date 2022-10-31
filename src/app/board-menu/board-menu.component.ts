@@ -16,6 +16,12 @@ export class BoardMenuComponent implements OnInit {
 
 	public ngOnInit(): void { }
 
+	public menu(): void {
+		if (this.board.displayDices) {
+			this.hideDices();
+		}
+	}
+
 	public reset(): void {
 		this.board.reset();
 	}
@@ -24,6 +30,14 @@ export class BoardMenuComponent implements OnInit {
 		for (const player of this.board.players) {
 			player.colorPicking = true;
 		}
+	}
+
+	public displayDices() {
+		this.board.displayDices = true;
+	}
+
+	public hideDices() {
+		this.board.displayDices = false;
 	}
 
 }

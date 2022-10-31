@@ -43,6 +43,10 @@
 			</div>
 		</div>
 	</div>
+	
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="8" [left]="35" [rotate]="90"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="42" [left]="35" [rotate]="90"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="74" [left]="35" [rotate]="90"></app-dice-20>
 
 	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'horizontal-top'"></app-board-menu>
 	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="16.5"

@@ -58,6 +58,11 @@
 		</div>
 	</div>
 
+	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="17" [left]="10" [rotate]="180"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="17" [left]="60" [rotate]="180"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="68" [left]="10"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="68" [left]="60"></app-dice-20>
+
 	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'center'"></app-board-menu>
 	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25"
 		[left]="25" [selectorWidth]="3" [manaWidth]="2.5" [space]="7" [rotate]="180"></app-board-menu-color>

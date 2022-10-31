@@ -1,5 +1,5 @@
 <ion-fab *ngIf="type === 'center'" vertical="center" horizontal="center" slot="fixed">
-	<ion-fab-button style="--background:#212121">
+	<ion-fab-button style="--background:#212121" (click)="menu()">
 		<mat-icon>menu</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="top">
@@ -12,11 +12,11 @@
 			<mat-icon>home</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
-	<!--ion-fab-list side="start">
-		<ion-fab-button>
-			<mat-icon>style</mat-icon>
+	<ion-fab-list side="start">
+		<ion-fab-button (click)="displayDices()">
+			<mat-icon>token</mat-icon>
 		</ion-fab-button>
-	</ion-fab-list-->
+	</ion-fab-list>
 	<ion-fab-list side="end">
 		<ion-fab-button (click)="openColorMenu()">
 			<mat-icon>color_lens</mat-icon>
@@ -24,7 +24,7 @@
 	</ion-fab-list>
 </ion-fab>
 <ion-fab *ngIf="type === 'vertical-top'" vertical="top" horizontal="start" slot="fixed">
-	<ion-fab-button style="--background:#212121">
+	<ion-fab-button style="--background:#212121" (click)="menu()">
 		<mat-icon>arrow_forward_ios</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="end">
@@ -34,16 +34,16 @@
 		<ion-fab-button routerLink="/">
 			<mat-icon>home</mat-icon>
 		</ion-fab-button>
-		<!--ion-fab-button>
-			<mat-icon>style</mat-icon>
-		</ion-fab-button-->
+		<ion-fab-button (click)="displayDices()">
+			<mat-icon>token</mat-icon>
+		</ion-fab-button>
 		<ion-fab-button (click)="openColorMenu()">
 			<mat-icon>color_lens</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
 </ion-fab>
 <ion-fab *ngIf="type === 'horizontal-top'" vertical="top" horizontal="end" slot="fixed">
-	<ion-fab-button style="--background:#212121">
+	<ion-fab-button style="--background:#212121" (click)="menu()">
 		<mat-icon class="horizontal-icon">arrow_forward_ios</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="bottom">
@@ -53,9 +53,9 @@
 		<ion-fab-button routerLink="/">
 			<mat-icon class="horizontal-icon">home</mat-icon>
 		</ion-fab-button>
-		<!--ion-fab-button>
-			<mat-icon class="horizontal-icon">style</mat-icon>
-		</ion-fab-button-->
+		<ion-fab-button (click)="displayDices()">
+			<mat-icon>token</mat-icon>
+		</ion-fab-button>
 		<ion-fab-button (click)="openColorMenu()">
 			<mat-icon class="horizontal-icon">color_lens</mat-icon>
 		</ion-fab-button>
