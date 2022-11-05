@@ -1,0 +1,8 @@
+<ion-fab-button (click)="toggle()" [ngStyle]="{
+	'width': width + 'rem', 'height': width + 'rem',
+	'top': 'calc(' + top + '% - ' + (width / 2) + 'rem)',
+	'left': 'calc(' + left + '% - ' + (width / 2) + 'rem)',
+	'transform': 'rotate(' + rotate + 'deg)'}">
+	<mat-icon *ngIf="!player.diceCounter">token</mat-icon>
+	<mat-icon *ngIf="player.diceCounter">add_box</mat-icon>
+</ion-fab-button>

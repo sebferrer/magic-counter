@@ -22,6 +22,7 @@ import { Board2PComponent } from './board/board2p';
 import { Board3PComponent } from './board/board3p';
 import { Board4PComponent } from './board/board4p';
 import { Dice20Component } from './dice/d20';
+import { DiceMenuComponent } from './dice/dice-menu';
 
 @NgModule({
 	declarations: [
@@ -29,6 +30,7 @@ import { Dice20Component } from './dice/d20';
 		HomeComponent,
 		BoardMenuComponent,
 		BoardMenuColorComponent,
+		DiceMenuComponent,
 		Dice20Component,
 		ABoardComponent,
 		Board1PComponent,

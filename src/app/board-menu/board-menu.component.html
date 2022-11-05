@@ -3,7 +3,7 @@
 		<mat-icon>menu</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="top">
-		<ion-fab-button (click)="reset()">
+		<ion-fab-button (click)="reset(); menuLeave();">
 			<mat-icon>refresh</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
@@ -13,12 +13,12 @@
 		</ion-fab-button>
 	</ion-fab-list>
 	<ion-fab-list side="start">
-		<ion-fab-button (click)="displayDices()">
+		<ion-fab-button (click)="displayDices(); menuLeave();">
 			<mat-icon>token</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
 	<ion-fab-list side="end">
-		<ion-fab-button (click)="openColorMenu()">
+		<ion-fab-button (click)="openColorMenu(); menuLeave();">
 			<mat-icon>color_lens</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
@@ -28,16 +28,16 @@
 		<mat-icon>arrow_forward_ios</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="end">
-		<ion-fab-button (click)="reset()">
+		<ion-fab-button (click)="reset(); menuLeave();">
 			<mat-icon>refresh</mat-icon>
 		</ion-fab-button>
 		<ion-fab-button routerLink="/">
 			<mat-icon>home</mat-icon>
 		</ion-fab-button>
-		<ion-fab-button (click)="displayDices()">
+		<ion-fab-button (click)="displayDices(); menuLeave();">
 			<mat-icon>token</mat-icon>
 		</ion-fab-button>
-		<ion-fab-button (click)="openColorMenu()">
+		<ion-fab-button (click)="openColorMenu(); menuLeave();">
 			<mat-icon>color_lens</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>
@@ -47,16 +47,16 @@
 		<mat-icon class="horizontal-icon">arrow_forward_ios</mat-icon>
 	</ion-fab-button>
 	<ion-fab-list side="bottom">
-		<ion-fab-button (click)="reset()">
+		<ion-fab-button (click)="reset(); menuLeave();">
 			<mat-icon class="horizontal-icon">refresh</mat-icon>
 		</ion-fab-button>
 		<ion-fab-button routerLink="/">
 			<mat-icon class="horizontal-icon">home</mat-icon>
 		</ion-fab-button>
-		<ion-fab-button (click)="displayDices()">
+		<ion-fab-button (click)="displayDices(); menuLeave();">
 			<mat-icon>token</mat-icon>
 		</ion-fab-button>
-		<ion-fab-button (click)="openColorMenu()">
+		<ion-fab-button (click)="openColorMenu(); menuLeave();">
 			<mat-icon class="horizontal-icon">color_lens</mat-icon>
 		</ion-fab-button>
 	</ion-fab-list>

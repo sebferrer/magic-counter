@@ -20,23 +20,33 @@ export class BoardMenuComponent implements OnInit {
 		if (this.board.displayDices) {
 			this.hideDices();
 		}
+		this.board.toggleDiceMenus();
+	}
+
+	public menuLeave(): void {
+		this.board.displayDiceMenus = false;
 	}
 
 	public reset(): void {
 		this.board.reset();
 	}
 
-	public openColorMenu() {
+	public openColorMenu(): void {
 		for (const player of this.board.players) {
 			player.colorPicking = true;
 		}
 	}
 
-	public displayDices() {
+	public displayDices(): void {
+		for(let i = 1; i <= this.board.players.length; i++) {
+			if (this.board.displayPlayerLifeDice(i)) {
+				return;
+			}
+		}
 		this.board.displayDices = true;
 	}
 
-	public hideDices() {
+	public hideDices(): void {
 		this.board.displayDices = false;
 	}
 

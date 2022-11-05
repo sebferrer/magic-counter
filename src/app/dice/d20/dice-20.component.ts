@@ -2,7 +2,8 @@
  * Copyright (c) 2022 by Vicente Mundim (https://codepen.io/vicentemundim/pen/nXNvBw)
  */
 
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { PlayerViewModel } from 'src/app/models/player.view.model';
 
 const DEFAULT_DICE_WIDTH = 200;
 const DICE_COLORS = ['#1EB414', '#FFD100', '#5BB7A8', '#699ED4', '#687D8B', '#99C34F', '#DA543C', '#E27F2F'];
@@ -16,7 +17,7 @@ const SORTED_FACES_MAP = new Map([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6]
 	templateUrl: './dice-20.component.html',
 	styleUrls: ['./dice-20.component.scss']
 })
-export class Dice20Component implements OnInit {
+export class Dice20Component implements OnInit, AfterViewInit {
 	@Input()
 	top: number; // %
 	@Input()
@@ -29,6 +30,8 @@ export class Dice20Component implements OnInit {
 	color: string; // deg
 	@Input()
 	type: string;
+	@Input()
+	player: PlayerViewModel;
 
 	@ViewChild('dice') diceElem: ElementRef;
 
@@ -38,7 +41,7 @@ export class Dice20Component implements OnInit {
 	timeoutId: any;
 	transitionDuration = 500;
 	animationDuration = 3000;
-	currentFace = 8;
+	currentFace = 1;
 	rolling = false;
 	rollingClass = '';
 
@@ -53,12 +56,26 @@ export class Dice20Component implements OnInit {
 		this.color = this.color == null ? DICE_COLORS[randomColor] : this.color;
 
 		switch (this.type) {
-			case 'sorted':
+			case 'life':
 				this.facesMap = SORTED_FACES_MAP;
+				if (this.player != null) {
+					this.player.lifeDice = this;
+				}
 				break;
 			default:
 				this.facesMap = CLASSIC_FACES_MAP;
 				break;
+		}
+		console.log(this.facesMap);
+	}
+
+	public ngAfterViewInit(): void {
+		switch (this.type) {
+			case 'life':
+				if (this.player != null) {
+					this.rollTo(this.player.life);
+					break;
+				}
 		}
 	}
 
@@ -83,6 +100,9 @@ export class Dice20Component implements OnInit {
 	// They see me rollin'
 	// They hatin'
 	roll(): boolean {
+		if (this.type == 'life') {
+			return;
+		}
 		if (!this.rolling) {
 			this.rolling = true;
 			this.rollingClass = 'rolling';

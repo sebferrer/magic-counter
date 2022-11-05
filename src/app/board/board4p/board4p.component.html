@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
 	<div id="board">
 		<div id="boardp1" [ngClass]="getPlayer(1).color">
-			<div class="life" id="life-p1">{{ getPlayer(1).life }}</div>
+			<div class="life" id="life-p1" *ngIf="!displayPlayerLifeDice(1)">{{ getPlayer(1).life }}</div>
 			<div id="buttons-p1">
 				<button mat-fab color="primary" (click)="updateLife(1, 5)">
 					<p>+5</p>
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div id="boardp2" [ngClass]="getPlayer(2).color">
-			<div class="life" id="life-p2">{{ getPlayer(2).life }}</div>
+			<div class="life" id="life-p2" *ngIf="!displayPlayerLifeDice(2)">{{ getPlayer(2).life }}</div>
 			<div id="buttons-p2">
 				<button mat-fab color="primary" (click)="updateLife(2, 5)">
 					<p>+5</p>
@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div id="boardp3" [ngClass]="getPlayer(3).color">
-			<div class="life" id="life-p3">{{ getPlayer(3).life }}</div>
+			<div class="life" id="life-p3" *ngIf="!displayPlayerLifeDice(3)">{{ getPlayer(3).life }}</div>
 			<div id="buttons-p3">
 				<button mat-fab color="primary" (click)="updateLife(3, -1)">
 					<p>-1</p>
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div id="boardp4" [ngClass]="getPlayer(4).color">
-			<div class="life" id="life-p4">{{ getPlayer(4).life }}</div>
+			<div class="life" id="life-p4" *ngIf="!displayPlayerLifeDice(4)">{{ getPlayer(4).life }}</div>
 			<div id="buttons-p4">
 				<button mat-fab color="primary" (click)="updateLife(4, -1)">
 					<p>-1</p>
@@ -58,10 +58,32 @@
 		</div>
 	</div>
 
-	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="17" [left]="10" [rotate]="180"></app-dice-20>
-	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="17" [left]="60" [rotate]="180"></app-dice-20>
-	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="68" [left]="10"></app-dice-20>
-	<app-dice-20 *ngIf="displayDices" [width]="120" [top]="68" [left]="60"></app-dice-20>
+	<app-dice-menu *ngIf="displayDiceMenus" [width]="2" [top]="40" [left]="92" [rotate]="180" [board]="this"
+		[player]="getPlayer(2)"></app-dice-menu>
+	<app-dice-menu *ngIf="displayDiceMenus" [width]="2" [top]="40" [left]="8" [rotate]="180" [board]="this" [player]="getPlayer(1)">
+	</app-dice-menu>
+	<app-dice-menu *ngIf="displayDiceMenus" [width]="2" [top]="60" [left]="92" [board]="this"
+		[player]="getPlayer(4)"></app-dice-menu>
+	<app-dice-menu *ngIf="displayDiceMenus" [width]="2" [top]="60" [left]="8" [board]="this" [player]="getPlayer(3)">
+	</app-dice-menu>
+
+	<app-dice-20 *ngIf="displayPlayerLifeDice(1)" [width]="150" [top]="15" [left]="7" [rotate]="180" [type]="'life'"
+		[player]="getPlayer(1)">
+	</app-dice-20>
+	<app-dice-20 *ngIf="displayPlayerLifeDice(2)" [width]="150" [top]="15" [left]="57" [rotate]="180" [type]="'life'"
+		[player]="getPlayer(2)">
+	</app-dice-20>
+	<app-dice-20 *ngIf="displayPlayerLifeDice(3)" [width]="150" [top]="67" [left]="7" [type]="'life'"
+		[player]="getPlayer(3)">
+	</app-dice-20>
+	<app-dice-20 *ngIf="displayPlayerLifeDice(4)" [width]="150" [top]="67" [left]="57" [type]="'life'"
+		[player]="getPlayer(4)">
+	</app-dice-20>
+
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="15" [left]="7" [rotate]="180"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="15" [left]="57" [rotate]="180"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="67" [left]="7"></app-dice-20>
+	<app-dice-20 *ngIf="displayDices" [width]="150" [top]="67" [left]="57"></app-dice-20>
 
 	<app-board-menu *ngIf="displayMenu" [board]="this" [type]="'center'"></app-board-menu>
 	<app-board-menu-color *ngIf="getPlayer(1).colorPicking" [board]="this" [player]="getPlayer(1)" [top]="25"
