@@ -104,15 +104,12 @@ $translateLowerYC200: $faceHeightC200 * 0.78 + $translateRingYC200;
         transform-style: preserve-3d;
         backface-visibility: hidden;
 
-        counter-increment: steps 1;
-
-        &:before {
-            content: counter(steps);
+        .face-number {
             position: absolute;
             top: $faceHeightC200 * 0.25;
             left: -$faceWidthC200;
             color: #fff;
-            text-shadow: 1px 1px 3px #000;
+            text-shadow: 1px 1px 2px #000;
             font-size: $faceHeightC200 * 0.5;
             text-align: center;
             line-height: $faceHeightC200 * 0.9;
@@ -269,7 +266,7 @@ $translateLowerYC150: $faceHeightC150 * 0.78 + $translateRingYC150;
             top: $faceHeightC150 * 0.25;
             left: -$faceWidthC150;
             color: #fff;
-            text-shadow: 1px 1px 3px #000;
+            text-shadow: 1px 1px 2px #000;
             font-size: $faceHeightC150 * 0.5;
             text-align: center;
             line-height: $faceHeightC150 * 0.9;
@@ -426,7 +423,7 @@ $translateLowerYC120: $faceHeightC120 * 0.78 + $translateRingYC120;
             top: $faceHeightC120 * 0.25;
             left: -$faceWidthC120;
             color: #fff;
-            text-shadow: 1px 1px 3px #000;
+            text-shadow: 1px 1px 2px #000;
             font-size: $faceHeightC120 * 0.5;
             text-align: center;
             line-height: $faceHeightC120 * 0.9;
@@ -583,7 +580,7 @@ $translateLowerYC100: $faceHeightC100 * 0.78 + $translateRingYC100;
             top: $faceHeightC100 * 0.25;
             left: -$faceWidthC100;
             color: #fff;
-            text-shadow: 1px 1px 3px #000;
+            text-shadow: 1px 1px 2px #000;
             font-size: $faceHeightC100 * 0.5;
             text-align: center;
             line-height: $faceHeightC100 * 0.9;

@@ -6,6 +6,10 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 const DEFAULT_DICE_WIDTH = 200;
 const DICE_COLORS = ['#1EB414', '#FFD100', '#5BB7A8', '#699ED4', '#687D8B', '#99C34F', '#DA543C', '#E27F2F'];
+const CLASSIC_FACES_MAP = new Map([[1, 1], [2, 7], [3, 17], [4, 3], [5, 19], [6, 13], [7, 15], [8, 10], [9, 16], [10, 9],
+[11, 12], [12, 5], [13, 11], [14, 6], [15, 8], [16, 2], [17, 18], [18, 4], [19, 14], [20, 20]]);
+const SORTED_FACES_MAP = new Map([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10],
+[11, 11], [12, 12], [13, 13], [14, 14], [15, 15], [16, 16], [17, 17], [18, 18], [19, 19], [20, 20]]);
 
 @Component({
 	selector: 'app-dice-20',
@@ -23,6 +27,8 @@ export class Dice20Component implements OnInit {
 	rotate: number; // deg
 	@Input()
 	color: string; // deg
+	@Input()
+	type: string;
 
 	@ViewChild('dice') diceElem: ElementRef;
 
@@ -36,14 +42,25 @@ export class Dice20Component implements OnInit {
 	rolling = false;
 	rollingClass = '';
 
-	constructor() {
+	facesMap: Map<number, number>;
+
+	constructor() { }
+
+	public ngOnInit(): void {
 		this.width = this.width == null ? DEFAULT_DICE_WIDTH : this.width;
 
 		const randomColor = Math.floor(Math.random() * DICE_COLORS.length);
 		this.color = this.color == null ? DICE_COLORS[randomColor] : this.color;
-	}
 
-	public ngOnInit(): void { }
+		switch (this.type) {
+			case 'sorted':
+				this.facesMap = SORTED_FACES_MAP;
+				break;
+			default:
+				this.facesMap = CLASSIC_FACES_MAP;
+				break;
+		}
+	}
 
 	randomFace(): number {
 		var face = Math.floor((Math.random() * this.sides)) + this.initialSide
